@@ -1,4 +1,4 @@
-module bottomRing(outerRadius=30,radialThickness=4,height=4,withMiddleBody=true,middleBodyWidth=12) {
+module bottomRing(outerRadius=30,radialThickness=4,height=4,withMiddleBody=false,middleBodyWidth=12,withAperture=true,aperture=30) {
     linear_extrude(height=height) {
         union() {
             difference(){
@@ -10,6 +10,16 @@ module bottomRing(outerRadius=30,radialThickness=4,height=4,withMiddleBody=true,
                     square([middleBodyWidth,2*outerRadius],center=true);
                     difference() {
                         circle(r=outerRadius+middleBodyWidth);
+                        circle(r=outerRadius);
+                    }
+                }
+            }
+            if (withAperture) {
+                difference() {
+                    square([2*outerRadius,2*outerRadius],center=true);
+                    square([2*outerRadius,aperture],center=true);
+                    difference() {
+                        circle(r=2*outerRadius);
                         circle(r=outerRadius);
                     }
                 }
