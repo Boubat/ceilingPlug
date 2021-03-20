@@ -1,4 +1,4 @@
-module finger(innerRadius=7,radialThickness=1,outerRadius=8,thickness=2,height=20,bladeHeight=45,bladeThickness=1,beamThickness=3,beamLength=30) {
+module finger(innerRadius=7,radialThickness=2,thickness=2,height=20,bladeHeight=45,bladeThickness=1.5,beamThickness=3,beamLength=30) {
     translate([0,0,height]){
         rotate([90,0,0]) {
             linear_extrude(height=thickness,center=true) {
