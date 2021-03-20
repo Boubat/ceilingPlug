@@ -10,7 +10,7 @@ holeRadius=32;
 bladeWidth=20;
 headDepth=3;
 headHeight=38;
-bladeThickness=1.2;
+bladeThickness=3;
 bladeHeight=42;
 bottomRingAperture=30;
 fingerHeight=20;
@@ -48,9 +48,9 @@ translate([bladeToCenter,0,0])
 
 // fingers
 translate([0,(fingerThickness+fingerSpacing)/2,0]) {
-    finger(innerRadius=fingerRadius,height=fingerHeight,thickness=fingerThickness,bladeHeight=bladeHeight,bladeThickness=bladeThickness,beamLength=bladeToCenter);
+    finger(innerRadius=fingerRadius,height=fingerHeight,thickness=fingerThickness,bladeHeight=bladeHeight,beamLength=bladeToCenter);
 }
 translate([0,-(fingerThickness+fingerSpacing)/2,0]) {
     rotate([0,0,180])
-        finger(innerRadius=fingerRadius,height=fingerHeight,thickness=fingerThickness,bladeHeight=bladeHeight,bladeThickness=bladeThickness,beamLength=bladeToCenter);
+        finger(innerRadius=fingerRadius,height=fingerHeight,thickness=fingerThickness,bladeHeight=bladeHeight,beamLength=bladeToCenter);
 }
