@@ -18,6 +18,7 @@ height=4;
 millingDepth=1;
 millingPathRadius=35;
 millingToolRadius=2.2;
+millingAngularPath = 58.7;
 
 // Adapter milling
 union() {
@@ -32,13 +33,24 @@ union() {
           cylinder(h=5.001,r=2,center=true);
       }
   }
-
-  translate([0,0,height+millingDepth/2]){
-    difference(){
-      cylinder(h=millingDepth,r=millingPathRadius+millingToolRadius-tolerance,center=true);
-      cylinder(h=millingDepth+0.001,r=millingPathRadius-millingToolRadius+tolerance,center=true);
+  rotate([0, 0, 0]) {
+    translate([0, 0, height + millingDepth/2]) {
+      radialMilling(pathRadius = millingPathRadius, toolRadius = millingToolRadius, depth = millingDepth, angle = millingAngularPath, tolerance = tolerance);
     }
   }
-
-  
+  rotate([0, 0, 90]) {
+    translate([0, 0, height + millingDepth/2]) {
+      radialMilling(pathRadius = millingPathRadius, toolRadius = millingToolRadius, depth = millingDepth, angle = millingAngularPath, tolerance = tolerance);
+    }
+  }
+  rotate([0, 0, 180]) {
+    translate([0, 0, height + millingDepth/2]) {
+      radialMilling(pathRadius = millingPathRadius, toolRadius = millingToolRadius, depth = millingDepth, angle = millingAngularPath, tolerance = tolerance);
+    }
+  }
+  rotate([0, 0, 270]) {
+    translate([0, 0, height + millingDepth/2]) {
+      radialMilling(pathRadius = millingPathRadius, toolRadius = millingToolRadius, depth = millingDepth, angle = millingAngularPath, tolerance = tolerance);
+    }
+  }
 }
