@@ -6,12 +6,18 @@ use <hook.scad>
 use <finger.scad>
 use <hexagonalHole.scad>
 
-holeRadius=32;
+// Ceiling hole:
+// diameter = 65 mm
+// depth = 55 mm
+// rim height = 38 mm
+// rim depth = 10 mm
+
+holeRadius=31;
 bladeWidth=20;
-headDepth=3;
+headDepth=5;
 headHeight=38;
-bladeThickness=3;
-bladeHeight=42;
+bladeThickness=2.5;
+bladeHeight=50;
 bottomRingAperture=30;
 fingerHeight=20;
 fingerRadius=10;
