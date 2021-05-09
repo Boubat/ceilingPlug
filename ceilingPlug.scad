@@ -16,12 +16,12 @@ holeRadius=31;
 bladeWidth=20;
 headDepth=5;
 headHeight=38;
-bladeThickness=2.5;
+bladeThickness=2.8;
 bladeHeight=50;
 bottomRingAperture=30;
 fingerHeight=20;
 fingerRadius=10;
-fingerThickness=2;
+fingerThickness=4;
 fingerSpacing=0.5;
 
 bladeToCenter = sqrt( holeRadius*holeRadius - bladeWidth*bladeWidth/4) - bladeThickness/2;
